@@ -1,0 +1,124 @@
+<mxfile host="Electron" modified="2023-04-15T12:22:48.236Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.1.2 Chrome/106.0.5249.199 Electron/21.4.3 Safari/537.36" etag="Tpi71wIRXWDZCvwrQ3xE" version="21.1.2" type="device" pages="2">
+  <diagram name="Use Case" id="44rhoL8vgVi-ukGq8_7j">
+    <mxGraphModel dx="1244" dy="877" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Gp9bMBnCvlOxRC6RPChZ-1" value="Data Scientist" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="90" y="270" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Gp9bMBnCvlOxRC6RPChZ-3" value="DatGen" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="220" y="100" width="250" height="550" as="geometry" />
+        </mxCell>
+        <mxCell id="Gp9bMBnCvlOxRC6RPChZ-4" value="Browse Available Data" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="285" y="140" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Gp9bMBnCvlOxRC6RPChZ-5" value="Insert Parameters for Synthetic Samples" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="285" y="240" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Gp9bMBnCvlOxRC6RPChZ-6" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Gp9bMBnCvlOxRC6RPChZ-1" target="Gp9bMBnCvlOxRC6RPChZ-4">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="110" y="250" as="sourcePoint" />
+            <mxPoint x="210" y="250" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Gp9bMBnCvlOxRC6RPChZ-7" value="Receive Synthetic Data" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="340" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Gp9bMBnCvlOxRC6RPChZ-8" value="Compare Data Characteristics" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="285" y="440" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Gp9bMBnCvlOxRC6RPChZ-9" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Gp9bMBnCvlOxRC6RPChZ-1" target="Gp9bMBnCvlOxRC6RPChZ-5">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="135" y="320" as="sourcePoint" />
+            <mxPoint x="295" y="190" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Gp9bMBnCvlOxRC6RPChZ-10" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="Gp9bMBnCvlOxRC6RPChZ-1" target="Gp9bMBnCvlOxRC6RPChZ-7">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="130" y="310" as="sourcePoint" />
+            <mxPoint x="295" y="290" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Gp9bMBnCvlOxRC6RPChZ-11" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="Gp9bMBnCvlOxRC6RPChZ-1" target="Gp9bMBnCvlOxRC6RPChZ-8">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="140" y="320" as="sourcePoint" />
+            <mxPoint x="290" y="390" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Gp9bMBnCvlOxRC6RPChZ-15" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Gp9bMBnCvlOxRC6RPChZ-12" target="Gp9bMBnCvlOxRC6RPChZ-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Gp9bMBnCvlOxRC6RPChZ-12" value="Data Engineer" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="70" y="555" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Gp9bMBnCvlOxRC6RPChZ-13" value="Exposing Data Assets to Dat Gen" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="285" y="545" width="120" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="7D_obvK-jPw7ggJHQD_N" name="Flow">
+    <mxGraphModel dx="1244" dy="877" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="JeZIjhVsABRhlAgBWhlj-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="JeZIjhVsABRhlAgBWhlj-2" target="JeZIjhVsABRhlAgBWhlj-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JeZIjhVsABRhlAgBWhlj-2" value="Start" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.start" vertex="1" parent="1">
+          <mxGeometry x="40" y="130" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JeZIjhVsABRhlAgBWhlj-3" value="User browses available data" style="shape=note;strokeWidth=2;fontSize=14;size=20;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#666600;" vertex="1" parent="1">
+          <mxGeometry x="25" y="30" width="110.00000000000001" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="JeZIjhVsABRhlAgBWhlj-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="JeZIjhVsABRhlAgBWhlj-4" target="JeZIjhVsABRhlAgBWhlj-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JeZIjhVsABRhlAgBWhlj-4" value="Parameter sekection" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="180" y="115" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JeZIjhVsABRhlAgBWhlj-6" value="User passes parameters to DatGen" style="shape=note;strokeWidth=2;fontSize=14;size=20;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#666600;" vertex="1" parent="1">
+          <mxGeometry x="190" y="30" width="110.00000000000001" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="JeZIjhVsABRhlAgBWhlj-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="JeZIjhVsABRhlAgBWhlj-7" target="JeZIjhVsABRhlAgBWhlj-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JeZIjhVsABRhlAgBWhlj-7" value="Synthetic Data Generation" style="whiteSpace=wrap;html=1;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="380" y="115" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JeZIjhVsABRhlAgBWhlj-9" value="Data Sampling / Parameter Sourcing" style="whiteSpace=wrap;html=1;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="380" y="255" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JeZIjhVsABRhlAgBWhlj-11" value="User passes parameters to DatGen" style="shape=note;strokeWidth=2;fontSize=14;size=20;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#666600;" vertex="1" parent="1">
+          <mxGeometry x="540" y="245" width="110.00000000000001" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="JeZIjhVsABRhlAgBWhlj-12" value="Internal Data" style="shape=datastore;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="395" y="400" width="90" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="JeZIjhVsABRhlAgBWhlj-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;startArrow=classic;startFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="JeZIjhVsABRhlAgBWhlj-9" target="JeZIjhVsABRhlAgBWhlj-12">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="443.5" y="325" as="sourcePoint" />
+            <mxPoint x="443.5" y="405" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JeZIjhVsABRhlAgBWhlj-14" value="Stop" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.start" vertex="1" parent="1">
+          <mxGeometry x="600" y="130" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JeZIjhVsABRhlAgBWhlj-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="JeZIjhVsABRhlAgBWhlj-7" target="JeZIjhVsABRhlAgBWhlj-14">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="510" y="144.5" as="sourcePoint" />
+            <mxPoint x="590" y="144.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JeZIjhVsABRhlAgBWhlj-16" value="User receives synthetic data&amp;nbsp;" style="shape=note;strokeWidth=2;fontSize=14;size=20;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#666600;" vertex="1" parent="1">
+          <mxGeometry x="585" y="35" width="110.00000000000001" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
