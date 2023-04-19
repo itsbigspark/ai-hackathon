@@ -1,2 +1,1 @@
-conda activate jupyter-lab
-pip freeze > ../environmnets/requirements.txt
+pip list --format=freeze > ../environments/requirements.txt
