@@ -1,1 +1,1 @@
-conda create -y -n jupyter-lab pandas numpy requests pyspark jupyterlab seaborn matplotlib scipy scikit-learn
+conda create -y -n jupyter-lab pandas numpy requests pyspark jupyterlab seaborn matplotlib scipy scikit-learn pytorch tensorflow
