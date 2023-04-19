@@ -8,10 +8,13 @@ import os
 from tabulate import tabulate
 
 def pre_process_df(csv_path):
+    rec_gender = lambda x: {'male': 0, 'female': 1}.get(x)
+    rec_embarked = lambda x: {'C':0, 'Q':1, 'S':2}.get(x)
     with open(csv_path) as csv_file:
-        df = pd.read_csv(filepath_or_buffer=csv_file, header=0)
-        df['Sex'] = df.Sex.map({'male':0, 'female':1})
-        df['Embarked'] = df.Embarked.map({'C':0, 'Q':1, 'S':2})
+        df = pd.read_csv(filepath_or_buffer=csv_file, header=0, converters={
+            'Sex': rec_gender,
+            'Embarked': rec_embarked
+        })
     return df
 
 
