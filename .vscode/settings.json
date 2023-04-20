@@ -3,7 +3,11 @@
     "cSpell.words": [
         "dtype",
         "dtypes",
+        "figsize",
+        "matplotlib",
         "Pclass",
+        "pyplot",
+        "savefig",
         "showindex",
         "tablefmt",
         "usecols"
