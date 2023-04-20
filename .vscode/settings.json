@@ -1,3 +1,18 @@
 {
-    "python.formatting.provider": "black"
+    "python.formatting.provider": "black",
+    "cSpell.words": [
+        "dtype",
+        "dtypes",
+        "figsize",
+        "matplotlib",
+        "Pclass",
+        "pyplot",
+        "savefig",
+        "showindex",
+        "suptitle",
+        "tablefmt",
+        "usecols",
+        "xlabel",
+        "ylabel"
+    ]
 }
