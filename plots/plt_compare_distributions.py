@@ -16,6 +16,7 @@ RUN_PREVIEW: Final[bool] = False
 # Handle list of numbers
 Num = Union[int, float]
 
+
 def gen_histograms(
     x: List[Num],
     y: List[Num],
@@ -24,16 +25,23 @@ def gen_histograms(
     plot_suptitle="Distribution Comparison",
     title_size=16,
     show_grid=True,
-    x_label = "Feature Name",
-    y_label = "Count",
-    show_bar_labels = True,
-    legend_pos='upper right',
-    labels = ['Sample X', 'Sample Y']
+    x_label="Feature Name",
+    y_label="Count",
+    show_bar_labels=True,
+    legend_pos="upper right",
+    labels=["Sample X", "Sample Y"],
 ):
     f = plt.figure(figsize=fig_size)
-    _, bins, bars = plt.hist(x, bins=50, range=[min(x+y), max(x+y)], label=labels[0], color='skyblue', lw=0)
-    plt.hist(y, bins=bins, alpha=0.5, label=labels[1], color='orange', lw=0)
-    plt.title(plot_title, size=title_size-3)
+    _, bins, bars = plt.hist(
+        x,
+        bins=50,
+        range=[min(x + y), max(x + y)],
+        label=labels[0],
+        color="skyblue",
+        lw=0,
+    )
+    plt.hist(y, bins=bins, alpha=0.5, label=labels[1], color="orange", lw=0)
+    plt.title(plot_title, size=title_size - 3)
     plt.grid(show_grid)
     plt.xlabel(x_label)
     plt.ylabel(y_label)
