@@ -6,13 +6,14 @@ import pathlib
 import os
 from matplotlib import pyplot as plt
 from typing import Final, Union, List
+import pandas as pd
 
 # This script location
 SCRIPT_DIR = pathlib.Path(__file__).parent.resolve()
 
 # Run preview
 try:
-    PREVIEW = os.getenv("PREVIEW", 'False').lower() in ('true', '1', 't')
+    PREVIEW = os.getenv("PREVIEW", "False").lower() in ("true", "1", "t")
 except:
     PREVIEW = False
 
@@ -38,7 +39,7 @@ def gen_histograms(
     _, bins, bars = plt.hist(
         x,
         bins=50,
-        range=[min(x + y), max(x + y)],
+        range=[min([*x, *y]), max([*x, *y])],
         label=labels[0],
         color="skyblue",
         lw=0,
@@ -65,3 +66,22 @@ if PREVIEW:
     # Run
     sample_figure = gen_histograms(x=sam_x, y=sam_y)
     sample_figure.savefig(os.path.join(SCRIPT_DIR, "sample_fig.png"), format="png")
+
+
+# Compare actual distributions
+df_tabgan = pd.read_csv(
+    os.path.join(SCRIPT_DIR, "..", "data", "fake", "tabgan_data.csv")
+)
+df_actual = pd.read_csv(os.path.join(SCRIPT_DIR, "..", "data", "raw", "train.csv"))
+
+plt_compare = gen_histograms(
+    x=random.sample(sorted(df_tabgan["Age"].values), 891),
+    y=df_actual["Age"].values,
+    plot_title="Synthetic and Real Age of Titanic Passengers",
+    show_bar_labels=False,
+    labels=['Synthetic', 'Actual'],
+    x_label="Age"
+)
+plt_compare.savefig(
+    os.path.join(SCRIPT_DIR, "tabgan_actual_comparison.png"), format="png"
+)
