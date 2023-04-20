@@ -11,7 +11,10 @@ from typing import Final, Union, List
 SCRIPT_DIR = pathlib.Path(__file__).parent.resolve()
 
 # Run preview
-RUN_PREVIEW: Final[bool] = False
+try:
+    PREVIEW = os.getenv("PREVIEW", 'False').lower() in ('true', '1', 't')
+except:
+    PREVIEW = False
 
 # Handle list of numbers
 Num = Union[int, float]
@@ -55,7 +58,7 @@ def gen_histograms(
 
 
 # Tests
-if RUN_PREVIEW:
+if PREVIEW:
     # Create sample distributions
     sam_x = [random.gauss(3, 1) for _ in range(400)]
     sam_y = [random.gauss(4, 2) for _ in range(400)]
