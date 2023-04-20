@@ -5,9 +5,13 @@ import random
 import pathlib
 import os
 from matplotlib import pyplot as plt
+from typing import Final
 
-# This script
+# This script location
 SCRIPT_DIR = pathlib.Path(__file__).parent.resolve()
+
+# Run preview
+RUN_PREVIEW: Final[bool] = False
 
 def gen_histograms(x, y, fig_size=(10, 5), plot_title="Distribution Comparison", title_size=16):
     f = plt.figure(figsize=fig_size)
@@ -20,9 +24,10 @@ def gen_histograms(x, y, fig_size=(10, 5), plot_title="Distribution Comparison",
 
 
 # Tests
-# Create sample distributions
-sam_x = [random.gauss(3,1) for _ in range(400)]
-sam_y = [random.gauss(4,2) for _ in range(400)]
-# Run 
-sample_figure = gen_histograms(x=sam_x, y=sam_y)
-sample_figure.savefig(os.path.join(SCRIPT_DIR, 'sample_fig.png'), format='png')
+if RUN_PREVIEW:
+    # Create sample distributions
+    sam_x = [random.gauss(3,1) for _ in range(400)]
+    sam_y = [random.gauss(4,2) for _ in range(400)]
+    # Run 
+    sample_figure = gen_histograms(x=sam_x, y=sam_y)
+    sample_figure.savefig(os.path.join(SCRIPT_DIR, 'sample_fig.png'), format='png')
