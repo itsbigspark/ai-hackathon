@@ -11,7 +11,7 @@ from typing import Final, Union, List
 SCRIPT_DIR = pathlib.Path(__file__).parent.resolve()
 
 # Run preview
-RUN_PREVIEW: Final[bool] = False
+RUN_PREVIEW: Final[bool] = True
 
 # Handle list of numbers
 Num = Union[int, float]
@@ -20,7 +20,8 @@ def gen_histograms(
     x: List[Num],
     y: List[Num],
     fig_size=(10, 5),
-    plot_title="Distribution Comparison",
+    plot_title="Actual vs. Synthetic Distribution",
+    plot_suptitle="Distribution Comparison",
     title_size=16,
     show_grid=True,
     x_label = "Feature Name",
@@ -30,12 +31,14 @@ def gen_histograms(
     labels = ['Sample X', 'Sample Y']
 ):
     f = plt.figure(figsize=fig_size)
-    _, bins, bars = plt.hist(x, bins=50, range=[min(x+y), max(x+y)], label=labels[0])
-    plt.hist(y, bins=bins, alpha=0.5, label=labels[1])
-    plt.title(plot_title, size=title_size)
+    _, bins, bars = plt.hist(x, bins=50, range=[min(x+y), max(x+y)], label=labels[0], color='skyblue', lw=0)
+    plt.hist(y, bins=bins, alpha=0.5, label=labels[1], color='orange', lw=0)
+    plt.title(plot_title, size=title_size-3)
     plt.grid(show_grid)
     plt.xlabel(x_label)
     plt.ylabel(y_label)
+    if plot_suptitle is not None:
+        plt.suptitle(plot_suptitle, size=title_size)
     if show_bar_labels:
         plt.bar_label(bars)
     if legend_pos is not None:

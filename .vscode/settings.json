@@ -9,6 +9,7 @@
         "pyplot",
         "savefig",
         "showindex",
+        "suptitle",
         "tablefmt",
         "usecols",
         "xlabel",
