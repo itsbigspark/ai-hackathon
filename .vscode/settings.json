@@ -10,6 +10,8 @@
         "savefig",
         "showindex",
         "tablefmt",
-        "usecols"
+        "usecols",
+        "xlabel",
+        "ylabel"
     ]
 }
