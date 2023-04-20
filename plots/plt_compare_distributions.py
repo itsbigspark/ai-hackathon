@@ -11,7 +11,7 @@ from typing import Final, Union, List
 SCRIPT_DIR = pathlib.Path(__file__).parent.resolve()
 
 # Run preview
-RUN_PREVIEW: Final[bool] = True
+RUN_PREVIEW: Final[bool] = False
 
 # Handle list of numbers
 Num = Union[int, float]
