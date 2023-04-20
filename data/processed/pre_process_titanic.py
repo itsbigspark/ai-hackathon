@@ -7,6 +7,7 @@ import pathlib
 import os
 from tabulate import tabulate
 from typing import Final
+import numpy as np
 
 
 def pre_process_df(csv_path):
@@ -19,7 +20,8 @@ def pre_process_df(csv_path):
             header=0,
             converters={"Sex": rec_gender, "Embarked": rec_embarked},
             dtype={"Survived": "bool"},
-            usecols=['Pclass', 'Sex', 'Age', 'Parch', 'Fare', 'Cabin', 'Embarked', 'SibSp']
+            usecols=['Pclass', 'Sex', 'Age', 'Parch', 'Fare', 'Cabin', 'Embarked', 'SibSp', 'PassengerId'],
+            index_col='PassengerId'
         )
     return df
 
@@ -35,14 +37,18 @@ SHOW_PREVIEW: Final[bool] = True
 df_train = pre_process_df(csv_path=os.path.join(DATA_PATH + "train.csv"))
 df_test = pre_process_df(csv_path=os.path.join(DATA_PATH + "test.csv"))
 
+# Get column lists
+df_train_numerical_cols = df_train.select_dtypes(include=np.number).columns.tolist()
+df_test_numerical_cols = df_test.select_dtypes(include=np.number).columns.tolist()
+
 # Show generated tables
 if SHOW_PREVIEW:
     print("Data path: " + DATA_PATH)
     print("Test data:")
-    print(tabulate(df_test.head(), tablefmt="psql", showindex=False, headers=df_test.columns))
-    print('Test data column types:')
-    print(df_test.dtypes)
+    print(tabulate(df_test.head(), tablefmt="psql", showindex=True, headers=df_test.columns))
+    print('Test data, numerical columns:')
+    print(*df_train_numerical_cols, sep='\n')
     print("Train data:")
-    print(tabulate(df_train.head(), tablefmt="psql", showindex=False, headers=df_train.columns))
-    print('Train data column types:')
-    print(df_train.dtypes)
+    print(tabulate(df_train.head(), tablefmt="psql", showindex=True, headers=df_train.columns))
+    print('Train data numerical columns:')
+    print(*df_test_numerical_cols, sep='\n')
